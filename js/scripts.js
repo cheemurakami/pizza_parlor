@@ -2,29 +2,47 @@
 //pizza no logic
 function Pizza (topping, size) {
   this.topping = topping;
-  this.size = size;
-  this.regularPrice = 10;
+  this.size = size; //new Size
+  this.shape = "flat"
+  this.taste = "delicious"
 }
-
+// new Pizza("tomato", "small") X
+// new Pizza("tomato", Size)
 Pizza.prototype.price =function(){
+  var regularPrice = 10;
+
   //topping
   if(this.topping == "cheese"){
-    this.regularPrice += 0.50;
+    regularPrice += 0.50;
   } else if (this.topping == "pepperoni"){
-    this.regularPrice += 1.00;
+    regularPrice += 1.00;
   } else if (this.topping == "tomato"){
-    this.regularPrice += 0.50;
+    regularPrice += 0.50;
   }
   //size
-  if(this.size == "medium"){
-    this.regularPrice += 1.50;
-  } else if (this.size == "large"){
-    this.regularPrice += 2.00;
-  }
-  return this.regularPrice;
+  // if(this.size == "medium"){
+  //   regularPrice += 1.50;
+  // } else if (this.size == "large"){
+  //   regularPrice += 2.00;
+  // }
+  console.log(this.size)
+
+  return regularPrice + this.size.sizePrice();
+  
 }
   
-
+function Size (name){
+  this.name = name;
+}
+Size.prototype.sizePrice = function(){
+  if(this.name == "small"){
+    return 0;
+  } else if(this.name == "medium"){
+    return  1.50;
+  } else if (this.name == "large"){
+    return  2.00;
+  }
+}
 
 
 $(document).ready(function(){
@@ -33,9 +51,10 @@ $(document).ready(function(){
     
     ///calculations
     
-    var topping = $("#topping").val();
-    var size = $("#size").val();
-    var pizza = new Pizza(topping, size);
+    var inputtedTopping = $("#topping").val();
+    var inputtedSize = $("#size").val();
+    var size = new Size(inputtedSize);
+    var pizza = new Pizza(inputtedTopping, size);
     var finalPrice = pizza.price(); //calculation no function
 
     // show final price
