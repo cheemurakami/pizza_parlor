@@ -1,6 +1,8 @@
 # _Pizza Parlor_
 
-#### Pizza Parlor _04/10/2020_
+https://cheemurakami.github.io/pizza_parlor/
+
+#### JavaScript & jQuery Project for Epicodus, _04/10/2020_
 
 #### By _**Chisato Murakami**_
 
