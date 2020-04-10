@@ -90,8 +90,8 @@ function attachPizzaListeners() {
   })
 };
 
+var orderList = new OrderList();
 $(document).ready(function(){
-  var orderList = new OrderList();
   attachPizzaListeners();
   $("#form").submit(function(event){
     event.preventDefault();

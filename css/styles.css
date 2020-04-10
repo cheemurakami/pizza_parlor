@@ -1,6 +1,13 @@
+body{
+  background-color: #c68c53;
+}
 .show-summary{
   display: none;
 }
 .order-list{
   display: none;
+}
+li{
+  color: #ffff80;
+  cursor: pointer;
 }
