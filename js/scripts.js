@@ -80,7 +80,7 @@ function showPizza (pizzaId){
   $("#size-of-pizza").html(pizza.size.name);
   $("#topping-of-pizza").html(pizza.topping.name);
   var finalPrice = pizza.price(); //calculation no function
-    $("#final-price").text("$" + finalPrice.toFixed(2) + ",");  
+  $("#final-price").text("$" + finalPrice.toFixed(2) + ",");  
 
 }
 
@@ -95,25 +95,22 @@ $(document).ready(function(){
   attachPizzaListeners();
   $("#form").submit(function(event){
     event.preventDefault();
-
     ///calculations
-    
     var inputtedNameOfPizza = $("#name-of-your-pizza").val();
     var inputtedTopping = $("#topping").val();
     var inputtedSize = $("#size").val();
     var topping = new Topping(inputtedTopping)
     var size = new Size(inputtedSize);
     var pizza = new Pizza(inputtedNameOfPizza, topping, size);
-    
     //adding orders
     orderList.addOrder(pizza);
-    
     //show orders name of your pizza
     // show-list();
     $(".order-list").show();
     displayList(orderList);
-    
     // $(".show-summary").show();
-   
+  });
+  $("#payment-info").click(function(){
+    $("#payment-input").show();
   });
 })

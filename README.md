@@ -17,6 +17,7 @@ This is a simple website to to chose and order pizza using the technologies I le
 | **Spec 4: prototype method for the cost of pizza depending on the selections chosen** | |
 | **Spec 5: list the pizza the user order after user submit**  | |
 | **Spec 6: when clicks list, it displays the order summary and price**    |
+| **Spec 7: add button for proceed to check out and show payment input section**    |
 
 
 ## Setup/Installation Requirements
