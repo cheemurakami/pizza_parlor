@@ -1,4 +1,4 @@
-# _Places I have been_
+# _Pizza Parlor_
 
 #### Pizza Parlor _04/10/2020_
 
@@ -13,8 +13,10 @@ This is a site of simple website to to chose and order pizza using the technolog
 |---------------------------|---------|-------
 | **Spec 1: selectboxes <- size(s, m, l), topping(cheese, pepperoni, tomato)**| |
 | **Spec 2: variables to store inputted data** | |
-| **Spec 3: ** | |
-| **Spec 3.25: album constructor: template for album list** | |
+| **Spec 3: Pizza constructor with properties for toppings and size** | |
+| **Spec 4: prototype method for the cost of pizza depending on the selections chosen** | |
+
+
 | **Spec 3.5: place constructor: has arguments above (location, landmarks...) and given id and array for adding and finding places later** | |
 | **Spec 4: need methods using Spec 3's constructor to add new place on the list(add button)** | |
 | **Spec 4.5: need methods using Spec 3's constructor to find places on the list(use id?)** | |
