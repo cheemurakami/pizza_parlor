@@ -56,7 +56,7 @@
         <h4>Order detail:</h4>
         <p>Size: <span id="size-of-pizza"></span></p>
         <p>Topping: <span id="topping-of-pizza"></span></p>
-        <p>You pay <span id="final-price"></span> I will deliver it to you.</p>
+        <p>You pay <span id="final-price"></span> we will deliver it to you.</p>
         <button id="payment-info" class="btn btn-success">Proceed to checkout</button>
       </div>
     </div>
@@ -91,9 +91,15 @@
           <option value="cat-pet">Affection</option>
         </select>
         <div class="pay-button">
-          <button id="payment-button" class="btn btn-success" type="submit">Confirm payment</button>
+          <button id="payment-button" class="btn btn-success">Continue</button>
         </div>
       </form>
+      <div class="user-payment-summary">
+        <h4>Review your payment info:<h4>
+        <span id="payment-username"></span> <br>
+        <span id="payment-street"></span> <br>
+        <span id="payment-city-state-zip"></span> <br>
+      </div>
     </div>
 
   </div>

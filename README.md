@@ -18,6 +18,7 @@ This is a simple website to to chose and order pizza using the technologies I le
 | **Spec 5: list the pizza the user order after user submit**  | |
 | **Spec 6: when clicks list, it displays the order summary and price**    |
 | **Spec 7: add button for proceed to check out and show payment input section**    |
+| **Spec 8: after users input their name, address, and payment option, press continue button so displays the summary of payment info**    |
 
 
 ## Setup/Installation Requirements
@@ -29,7 +30,7 @@ _{You can clone this program to your desktop or download the zip file on this pa
 ## Known Bugs
 
 _{Fixed JavaScript bug below:
-  No know bugs at this time_
+  Have to click continue button twice to show review your payment info box.}_
 
 ## Support and contact details
 

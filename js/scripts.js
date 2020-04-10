@@ -64,12 +64,19 @@ Size.prototype.sizePrice = function () {
 }
 
 //payment info logic/////////////////////////////////////////////////////////
-function UserInfo(fullName, street, city, state, zip){
+function UserInfo(fullName, street, city, state, zip, paymentOption){
   this.fullName = fullName;
   this.street = street;
   this.city = city;
   this.state = state;
   this.zip = zip;
+  this.paymentOption = paymentOption;
+}
+
+UserInfo.prototype.paymentSummary = function(){
+  $("#payment-username").html(this.fullName);
+  $("#payment-street").html(this.street);
+  $("#payment-city-state-zip").html(this.city + " " + this.state + " " + this.zip);
 }
 
 //UI logic/////////////////////////////////////////////////////////
@@ -129,7 +136,12 @@ $(document).ready(function () {
     var inputtedUserCity = $("#user-city").val();
     var inputtedUserState = $("#user-state").val();
     var inputtedUserZip = $("#user-zip").val();
-    var newUserInfo = new UserInfo(inputtedUserName, inputtedUserStreet, inputtedUserCity, inputtedUserState, inputtedUserZip);
-    console.log(newUserInfo);
+    var inputtedUserPaymentOption = $("#payment-option").val();
+    var newUserInfo = new UserInfo(inputtedUserName, inputtedUserStreet, inputtedUserCity, inputtedUserState, inputtedUserZip, inputtedUserPaymentOption);
+    $("#payment-button").click(function(){
+      newUserInfo.paymentSummary(inputtedUserName);
+      //show function for payment address and option summary 
+      console.log(newUserInfo);
+    })
   })
 })
