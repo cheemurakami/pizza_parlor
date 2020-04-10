@@ -12,7 +12,7 @@ OrderList.prototype.assignId = function(){
   return this.currentId;
 }
 OrderList.prototype.findOrder = function(id){
-  for (var i = 0; i<this.pizzas.length; i++){
+  for (var i = 0; i < this.pizzas.length; i++){
     if(this.pizzas[i].id == id){
       return this.pizzas[i];
     }
@@ -64,7 +64,6 @@ Size.prototype.sizePrice = function(){
 }
 
 //UI no logic/////////////////////////////////////////////////////////
-var orderList = new OrderList();
 
 function displayList (orderListDisplay){
   var showList = $("#show-order-list");
@@ -92,6 +91,7 @@ function attachPizzaListeners() {
 };
 
 $(document).ready(function(){
+  var orderList = new OrderList();
   attachPizzaListeners();
   $("#form").submit(function(event){
     event.preventDefault();

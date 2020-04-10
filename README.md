@@ -5,7 +5,7 @@
 #### By _**Chisato Murakami**_
 
 ## Description
-This is a site of simple website to to chose and order pizza using the technologies I learned during my forth week at Epicodus.
+This is a simple website to to chose and order pizza using the technologies I learned during my forth week at Epicodus.
 
 ## Project Specefications
 
