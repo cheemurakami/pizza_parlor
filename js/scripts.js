@@ -1,15 +1,23 @@
 //pizza list no logic/////////////////////////////////////////////////////
 function OrderList (){
-  this.orders = [];
+  this.pizzas = [];
   this.currentId = 0;
 }
 OrderList.prototype.addOrder = function(pizza){
   pizza.id = this.assignId();
-  this.orders.push(pizza);
+  this.pizzas.push(pizza);
 }
 OrderList.prototype.assignId = function(){
   this.currentId += 1;
   return this.currentId;
+}
+OrderList.prototype.findOrder = function(id){
+  for (var i = 0; i<this.pizzas.length; i++){
+    if(this.pizzas[i].id == id){
+      return this.pizzas[i];
+    }
+  };
+  return false;
 }
 
 //pizza no logic//////////////////////////////////////////////////////////
@@ -55,17 +63,36 @@ Size.prototype.sizePrice = function(){
   }
 }
 
-//name no logic/////////////////////////////////////////////////////////
-function Name (name){
-  this.name = name;
-}
-Name.prototype.displayName = function(){
-  return this.name;
-}
-
 //UI no logic/////////////////////////////////////////////////////////
 var orderList = new OrderList();
+
+function displayList (orderListDisplay){
+  var showList = $("#show-order-list");
+  var htmlForOrderInfo = "";
+  orderListDisplay.pizzas.forEach(function(pizza){
+    htmlForOrderInfo += "<li id=" + pizza.id + ">" + pizza.name + "</li>";
+  });
+  showList.html(htmlForOrderInfo);
+}
+function showPizza (pizzaId){
+  var pizza = orderList.findOrder(pizzaId);
+  console.log(pizza.size.name)
+  $(".show-summary").show();
+  $("#size-of-pizza").html(pizza.size.name);
+  $("#topping-of-pizza").html(pizza.topping.name);
+  var finalPrice = pizza.price(); //calculation no function
+    $("#final-price").text("$" + finalPrice.toFixed(2));  
+
+}
+
+function attachPizzaListeners() {
+  $("#show-order-list").on("click", "li", function(){
+    showPizza(this.id);
+  })
+};
+
 $(document).ready(function(){
+  attachPizzaListeners();
   $("#form").submit(function(event){
     event.preventDefault();
 
@@ -74,20 +101,19 @@ $(document).ready(function(){
     var inputtedNameOfPizza = $("#name-of-your-pizza").val();
     var inputtedTopping = $("#topping").val();
     var inputtedSize = $("#size").val();
-    var name = new Name (inputtedNameOfPizza);
     var topping = new Topping(inputtedTopping)
     var size = new Size(inputtedSize);
-    var pizza = new Pizza(name, topping, size);
-    var finalPrice = pizza.price(); //calculation no function
-
-    //display name of pizza
-  
-    orderList.addOrder(pizza);
-    console.log(orderList)
+    var pizza = new Pizza(inputtedNameOfPizza, topping, size);
     
-
-    // show final price
-    $(".show-summary").show();
-    $("#final-price").text("$" + finalPrice.toFixed(2));
+    //adding orders
+    orderList.addOrder(pizza);
+    
+    //show orders name of your pizza
+    // show-list();
+    $(".order-list").show();
+    displayList(orderList);
+    
+    // $(".show-summary").show();
+   
   });
 })

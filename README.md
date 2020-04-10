@@ -16,16 +16,7 @@ This is a site of simple website to to chose and order pizza using the technolog
 | **Spec 3: Pizza constructor with properties for toppings and size** | |
 | **Spec 4: prototype method for the cost of pizza depending on the selections chosen** | |
 | **Spec 5: list the pizza the user order after user submit**  | |
-| **Spec 6: when clicks list, it displays the detail of the place**    | |
-| **Spec 7: when it displays the detail of the place, add delete button** | |
-| **Spec 8: add function for deleting the place info**  | |
-| **Spec 8: delete function should be associated to the given id when its added**  | |
-
-
-**Optional Specs: Computer AI**
-|   ||
-|  | |
-
+| **Spec 6: when clicks list, it displays the order summary and price**    |
 
 
 ## Setup/Installation Requirements
