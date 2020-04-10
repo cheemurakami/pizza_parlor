@@ -80,7 +80,7 @@ function showPizza (pizzaId){
   $("#size-of-pizza").html(pizza.size.name);
   $("#topping-of-pizza").html(pizza.topping.name);
   var finalPrice = pizza.price(); //calculation no function
-    $("#final-price").text("$" + finalPrice.toFixed(2));  
+    $("#final-price").text("$" + finalPrice.toFixed(2) + ",");  
 
 }
 

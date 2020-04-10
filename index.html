@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pizza Parlor</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css" type="text/css">
   <script src="js/jQuery3.4.1.js"></script>
   <script src="js/scripts.js"></script>
 </head>
+
 <body>
   <div class="container">
+
+
     <img src="nekopizza.png" alt="pizzapic">
-    
+
+
     <h3>Neko pizza</h3>
     <div class="form-container">
       <form id="form">
@@ -38,22 +44,36 @@
         </div>
         <button class="btn btn-success" type=submit>Order</button>
       </form>
-      <div class="row">
+
+
+
+      <div class="row display">
         <div class="order-list col-md-6">
           <p>You order list:</p>
           <ul id="show-order-list">
-  
+
           </ul>
         </div>
         <div class="show-summary col-md-6">
-          <p>Order summary:</p>
+          <p>Order detail:</p>
           <p>Size: <span id="size-of-pizza"></span></p>
           <p>Topping: <span id="topping-of-pizza"></span></p>
-          <p>Your final price is <span id="final-price"></span></p>
+          <p>You pay <span id="final-price"></span> I will deliver it to you.</p>
         </div>
 
       </div>
     </div>
   </div>
 </body>
+<div class="card">
+  <div class="card-header">
+    Quote
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>“Those pizzas I ate were for medicinal purposes.”</p>
+      <footer class="blockquote-footer">Kiwi the owner</footer>
+    </blockquote>
+  </div>
+</div>
 </html>

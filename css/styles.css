@@ -1,5 +1,6 @@
 body{
   background-color: #c68c53;
+  font-family: "Gill Sans", sans-serif;
 }
 .show-summary{
   display: none;
@@ -8,6 +9,15 @@ body{
   display: none;
 }
 li{
-  color: #ffff80;
+  color: #ffcc00;
   cursor: pointer;
+}
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.display{
+  margin-top: 10vh;
+  margin-bottom: 10vh;
 }
