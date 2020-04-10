@@ -15,16 +15,22 @@
     <h3>chose your topping and size:</h3>
     <div class="form-container">
       <form id="form">
-        <div class="form-group name-of-your-pizza">
-          Name your pizza:<input id="name-of-your-pizza" type="text">
-        </div>
         <div class="form-group topping">
-          <select name="topping" id="topping">
+          topping:
+          <input type="checkbox" id="cheese">
+          <label for="cheese">Cheese</label>
+          <input type="checkbox" id="pepperoni">
+          <label for="pepperoni">Pepperoni</label>
+          <input type="checkbox" id="tomato">
+          <label for="tomato">Tomato</label>
+          
+
+          <!-- <select name="topping" id="topping">
             <option value="none">None</option>
             <option value="cheese">Cheese</option>
             <option value="pepperoni">Pepperoni</option>
             <option value="tomato">Tomato</option>
-          </select>
+          </select> -->
         </div>
         <div class="form-group size-form">
           <label for="size">Size</label>
@@ -36,15 +42,7 @@
         </div>
         <button class="btn btn-success" type=submit>Order</button>
       </form>
-      <div class="order-list">
-        <p>You order list:</p>
-        <ul>
-
-        </ul>
-      </div>
-      <div class="show-summary">
-        <p>Size: <span id="size-of-pizza"></span></p>
-        <p>Topping: <span id="topping-of-pizza"></span></p>
+      <div class="show">
         <p>Your final price is <span id="final-price"></span></p>
       </div>
     </div>

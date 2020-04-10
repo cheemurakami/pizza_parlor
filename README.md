@@ -15,12 +15,7 @@ This is a site of simple website to to chose and order pizza using the technolog
 | **Spec 2: variables to store inputted data** | |
 | **Spec 3: Pizza constructor with properties for toppings and size** | |
 | **Spec 4: prototype method for the cost of pizza depending on the selections chosen** | |
-
-
-| **Spec 3.5: place constructor: has arguments above (location, landmarks...) and given id and array for adding and finding places later** | |
-| **Spec 4: need methods using Spec 3's constructor to add new place on the list(add button)** | |
-| **Spec 4.5: need methods using Spec 3's constructor to find places on the list(use id?)** | |
-| **Spec 5: on the list the name of the location should be displayed and clickable**  | |
+| **Spec 5: list the pizza the user order after user submit**  | |
 | **Spec 6: when clicks list, it displays the detail of the place**    | |
 | **Spec 7: when it displays the detail of the place, add delete button** | |
 | **Spec 8: add function for deleting the place info**  | |
