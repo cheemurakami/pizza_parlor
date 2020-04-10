@@ -17,8 +17,6 @@ function Pizza (name, topping, size) {
   this.name = name;
   this.topping = topping;
   this.size = size; //new Size
-  this.shape = "flat"
-  this.taste = "delicious"
 }
 // new Pizza("tomato", "small") X
 // new Pizza("tomato", Size)
@@ -84,7 +82,6 @@ $(document).ready(function(){
 
     //display name of pizza
   
-    var orderList = new OrderList(inputtedNameOfPizza);
     orderList.addOrder(pizza);
     console.log(orderList)
     
